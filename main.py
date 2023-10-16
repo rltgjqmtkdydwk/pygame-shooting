@@ -64,7 +64,7 @@ class Bullet(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.bottom = y
         self.rect.centerx = x
-        self.speedy = -15
+        self.speedy = -20
 
     def update(self):
         self.rect.y += self.speedy
@@ -103,7 +103,7 @@ while run:
         enemy = Enemy()
         all_sprites.add(enemy)
         enemies.add(enemy)
-        player.score += 1
+        player.score += 2
         bullets.remove(hit)
 
     hits = pygame.sprite.spritecollide(player, enemies, False)
